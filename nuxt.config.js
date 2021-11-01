@@ -61,24 +61,24 @@ export default {
     gtm: {
     id: 'GTM-P7CJ6Q5'
   },
-  proxy: {
-    '/rbd_api': {
-      target: process.env.RBD_API_URL, pathRewrite: { '^/rbd_api': '' },
-      headers: {
-        api_key: process.env.RBD_API_KEY
-      }
-    },
-    '/rbd_leads_api': {
-      target: process.env.RBD_API_URL, pathRewrite: { '^/rbd_leads_api': '' },
-      headers: {
-        api_key: process.env.RBD_BI_LEADS_API_KEY
-      }
-    }
-  },
-  env: {
-    DOMKZ_URL: process.env.DOMKZ_URL,
-    DOMKZ_API_URL: process.env.DOMKZ_API_URL
-  },
+  // proxy: {
+  //   '/rbd_api': {
+  //     target: process.env.RBD_API_URL, pathRewrite: { '^/rbd_api': '' },
+  //     headers: {
+  //       api_key: process.env.RBD_API_KEY
+  //     }
+  //   },
+  //   '/rbd_leads_api': {
+  //     target: process.env.RBD_API_URL, pathRewrite: { '^/rbd_leads_api': '' },
+  //     headers: {
+  //       api_key: process.env.RBD_BI_LEADS_API_KEY
+  //     }
+  //   }
+  // },
+  // env: {
+  //   DOMKZ_URL: process.env.DOMKZ_URL,
+  //   DOMKZ_API_URL: process.env.DOMKZ_API_URL
+  // },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

@@ -2,6 +2,7 @@
   <div>
     <Header/>
     <Nav/>
+    <Intro/>
   </div>
 </template>
 
@@ -9,12 +10,14 @@
 
 import Header from "~/components/Header";
 import Nav from "~/components/Nav";
+import Intro from "~/components/Intro";
 
 export default {
   name: "index",
   components: {
     Header,
-    Nav
+    Nav,
+    Intro
   },
   data() {
     return {}
