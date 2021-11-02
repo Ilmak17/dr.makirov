@@ -25,8 +25,9 @@ export default {
 
 <style scoped lang="scss">
 .intro {
-  padding-top: 220px;
-  background: url("/images/intro/bg.jpg");
+  margin-top: 3px;
+  padding-top: 147px;
+  background: url("/images/intro/bg.jpg") right;
   background-size: cover;
 }
 

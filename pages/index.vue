@@ -3,6 +3,8 @@
     <Header/>
     <Nav/>
     <Intro/>
+    <AboutMe/>
+    <Treatment/>
   </div>
 </template>
 
@@ -11,13 +13,17 @@
 import Header from "~/components/Header";
 import Nav from "~/components/Nav";
 import Intro from "~/components/Intro";
+import AboutMe from "~/components/AboutMe";
+import Treatment from "~/components/Treatment";
 
 export default {
   name: "index",
   components: {
     Header,
     Nav,
-    Intro
+    Intro,
+    AboutMe,
+    Treatment,
   },
   data() {
     return {}

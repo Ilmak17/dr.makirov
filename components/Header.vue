@@ -2,20 +2,20 @@
   <header>
     <div class="container d-flex align-items-center">
       <div class="header__logo">
-       <img src="@/static/images/logo.png" alt="logo">
+       <img src="/images/logo.png" alt="logo">
       </div>
       <div class="header__info d-flex justify-content-between align-items-center">
         <div class="header__city d-flex">
-          <img src="@/static/images/place.svg" class="icon transform" alt="place">
+          <img src="/images/place.svg" class="icon transform" alt="place">
           Москва
         </div>
         <div class="header__phone d-flex">
-          <img src="@/static/images/phone.svg" class="icon transform" alt="phone">
+          <img src="/images/phone.svg" class="icon transform" alt="phone">
           <a class="header__phone" href="tel:84953613226">8 (495) 361 32 26</a>
         </div>
         <div class="header__instagram">
           <a href="">
-            <img class="transform" src="@/static/images/instagram.svg" alt="instagram">
+            <img class="transform" src="/images/instagram.svg" alt="instagram">
           </a>
         </div>
       </div>
