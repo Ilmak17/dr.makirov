@@ -27,7 +27,7 @@ export default {
 .intro {
   margin-top: 3px;
   padding-top: 147px;
-  background: url("/images/intro/bg.jpg") right;
+  background: url("/images/intro/bg.jpg") center;
   background-size: cover;
 }
 

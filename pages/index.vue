@@ -5,6 +5,9 @@
     <Intro/>
     <AboutMe/>
     <Treatment/>
+    <Diagnostics/>
+    <Request/>
+    <Team/>
   </div>
 </template>
 
@@ -15,6 +18,9 @@ import Nav from "~/components/Nav";
 import Intro from "~/components/Intro";
 import AboutMe from "~/components/AboutMe";
 import Treatment from "~/components/Treatment";
+import Diagnostics from "~/components/Diagnostics";
+import Request from "~/components/Request";
+import Team from "~/components/Team";
 
 export default {
   name: "index",
@@ -24,6 +30,9 @@ export default {
     Intro,
     AboutMe,
     Treatment,
+    Diagnostics,
+    Request,
+    Team
   },
   data() {
     return {}
@@ -58,5 +67,12 @@ p {
   &:hover {
     transform: translateY(-5px);
   }
+}
+
+.title {
+  padding-top: 114px;
+  font-size: 39px;
+  font-weight: 600;
+  text-align: right;
 }
 </style>
