@@ -8,6 +8,8 @@
     <Diagnostics/>
     <Request/>
     <Team/>
+    <Address/>
+    <Reviews/>
   </div>
 </template>
 
@@ -21,6 +23,8 @@ import Treatment from "~/components/Treatment";
 import Diagnostics from "~/components/Diagnostics";
 import Request from "~/components/Request";
 import Team from "~/components/Team";
+import Address from "~/components/Address";
+import Reviews from "~/components/Reviews";
 
 export default {
   name: "index",
@@ -32,7 +36,9 @@ export default {
     Treatment,
     Diagnostics,
     Request,
-    Team
+    Team,
+    Address,
+    Reviews
   },
   data() {
     return {}
@@ -41,6 +47,12 @@ export default {
 };
 </script>
 <style lang="scss">
+
+body {
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -74,5 +86,6 @@ p {
   font-size: 39px;
   font-weight: 600;
   text-align: right;
+  color: #003D4A;
 }
 </style>

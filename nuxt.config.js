@@ -39,7 +39,9 @@ export default {
     { src: '~/plugins/Vueslider', mode: 'client' },
     { src: '~/plugins/vue-awesome-swiper', mode: 'client' },
     { src: '~/plugins/vue-mask', mode: 'client' },
-    { src: '~/plugins/vueMask', mode: 'client' }
+    { src: '~/plugins/vueMask', mode: 'client' },
+    { src: '~/plugins/yandexMap', mode: 'client' },
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
