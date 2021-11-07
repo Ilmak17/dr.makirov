@@ -1,5 +1,5 @@
 <template>
-  <div class="reviews">
+  <div class="reviews" id="Reviews">
     <div class="container">
       <div class="title">Отзывы</div>
     </div>
@@ -21,12 +21,12 @@
       <div class="swiper-button-next" slot="button-next">
         <img src="/images/reviews/right.svg" alt="">
       </div>
+
     </swiper>
   </div>
 </template>
 
 <script>
-import {Swiper, SwiperSlide} from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
@@ -36,13 +36,13 @@ export default {
     return {
       swiperOption: {
         slidesPerView: 2,
-        // spaceBetween: 30,
         grabCursor: true,
         loop: true,
-        // autoplay: {
-        //   delay: 5000,
-        //   disableOnInteraction: false,
-        // },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        speed: 1000,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
@@ -186,6 +186,7 @@ export default {
 .reviews {
   background: url("/images/reviews/bg.jpg");
   background-size: cover;
+  padding-bottom: 100px;
 }
 
 .cart {
@@ -203,22 +204,16 @@ export default {
   color: #003D4A;
 }
 
-.card__quote::after {
-  //width: 81px;
-  //height: 68px;
-  ////font-size: 176px;
-  ////font-weight: 600;
-  ////color: rgba(1, 151, 184, 0.17);
-  ////transform: matrix(-1, 0, 0, 1, 0, 0);
-  //padding: 25px;
-  //background: rgba(1, 151, 184, 0.17);
-  //border: 1px solid rgba(1, 151, 184, 0.17);
-  content: "\201c";
-  font-size: 176px;
-  margin-top: -10px;
-  margin-bottom: -80px;
-  font-weight: 600;
-  color: rgba(1, 151, 184, 0.17);
+.card__quote {
+  width: 81px;
+  height: 68px;
+
+  &::after {
+    content: "\201c";
+    font-size: 176px;
+    font-weight: 600;
+    color: rgba(1, 151, 184, 0.17);
+  }
 }
 
 .card__text {
@@ -226,12 +221,11 @@ export default {
   font-size: 22px;
   font-weight: 400;
   color: #003D4A;
-
 }
 
 .slider {
   padding-top: 94px;
-  padding-bottom: 65px;
+  padding-bottom: 120px;
   width: 100%;
   max-width: 1300px;
 }
@@ -241,16 +235,13 @@ export default {
   justify-content: center;
 }
 
-
 .swiper-button-prev {
   padding: 19px 24px 19px 20px;
-  top: 100%;
   left: 2%;
 }
 
 .swiper-button-next {
   padding: 19px 21px 19px 24px;
-  top: 100%;
   right: 2%;
 }
 
@@ -258,9 +249,18 @@ export default {
   position: absolute;
   width: 58px;
   height: 58px;
+  top: 94%;
   background: #20B6D8;
   box-shadow: 0 15.1905px 27.619px rgba(32, 182, 216, 0.29);
   border-radius: 38.0328px;
+
+  &:hover {
+    background: #49bed9;
+  }
+
+  &::after {
+    display: none;
+  }
 }
 
 

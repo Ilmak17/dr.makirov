@@ -14,7 +14,7 @@
           <a class="header__phone" href="tel:84953613226">8 (495) 361 32 26</a>
         </div>
         <div class="header__instagram">
-          <a href="">
+          <a href="https://www.instagram.com/dr.makirov">
             <img class="transform" src="/images/instagram.svg" alt="instagram">
           </a>
         </div>

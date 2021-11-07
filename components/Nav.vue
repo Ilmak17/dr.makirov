@@ -1,7 +1,8 @@
 <template>
   <nav>
     <div class="container d-flex justify-content-between">
-      <a class="nav__link" v-for="(item, index) in navItems"
+      <a class="nav__link" v-for="item in navItems"
+         @click="openSection(item.path)"
          :key="item.id">
         {{ item.name }}
       </a>
@@ -14,33 +15,41 @@
 export default {
   name: "Nav",
 
+  methods: {
+    openSection(index) {
+      let services = document.getElementById(index);
+      let top = window.scrollY + services.getBoundingClientRect().y - 100;
+      window.scrollTo({left: 0, top, behavior: 'smooth'});
+    }
+  },
+
   data() {
     return {
       navItems: [
         {
           id: 0,
           name: "Врачи",
-          path: "",
+          path: "Team",
         },
         {
           id: 1,
           name: "Адреса",
-          path: "",
+          path: "Address",
         },
         {
           id: 2,
           name: "Вопросы",
-          path: "",
+          path: "Questions",
         },
         {
           id: 3,
           name: "Отзывы",
-          path: "",
+          path: "Reviews",
         },
         {
           id: 4,
           name: "Стационар",
-          path: "",
+          path: "Hospital",
         },
       ]
     }

@@ -1,5 +1,5 @@
 <template>
-  <div class="team">
+  <div class="team" id="Team">
     <div class="container">
       <div class="title">Наша команда врачей </div>
       <div class="team__items d-flex justify-content-between flex-wrap">

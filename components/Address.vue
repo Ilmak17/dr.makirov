@@ -1,5 +1,5 @@
 <template>
-  <div class="address">
+  <div class="address" id="Address">
     <div class="container d-flex justify-content-between">
       <div class="address__inner">
         <div class="title text-left text-white">Наш адрес</div>

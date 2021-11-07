@@ -10,7 +10,7 @@
             Получите диагностику в день консультации врача
           </div>
         </div>
-        <button class="btn">
+        <button @click="$bvModal.show('my-modal')" class="btn">
           Записаться на прием
         </button>
       </div>
