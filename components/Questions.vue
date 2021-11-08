@@ -9,10 +9,12 @@
                :key="index" role="tablist">
             <b-card no-body>
               <b-card-header header-tag="header" role="tab">
-                <b-button block v-b-toggle="`${item.accordion}`" class="card__button" variant="info">
+                <b-button @click="item.open = !item.open"
+                  block v-b-toggle="`${item.accordion}`" class="card__button" variant="info">
                   {{ item.question }}
                   <div class="arrow">
-                    <img src="/images/questions/arrow.svg" alt="arrow">
+                    <img v-bind:class="{ active: item.open }"
+                      src="/images/questions/arrow.svg" alt="arrow">
                   </div>
                 </b-button>
               </b-card-header>
@@ -43,12 +45,14 @@ export default {
     return {
       questions: [
         {
+          open: true,
           accordion: 'accordion-1',
           question: 'Как долго прослужат импланты? Нужно ли будет их менять в дальнейшем?',
           answer: 'Имплант, установленный в строгом соответствии с протоколом, приживается' +
             ' с вероятностью 98-100% и может прослужить всю жизнь'
         },
         {
+          open: false,
           accordion: 'accordion-2',
           question: 'Какие импланты мы будем ставить? В чем их преимущество перед другими?',
           answer: 'Импланты фирмы Stryker, США. Титановый сплав высокого качества. -' +
@@ -58,18 +62,21 @@ export default {
             'крепления'
         },
         {
+          open: false,
           accordion: 'accordion-3',
           question: 'Смогу ли я в длительной перспективе, жить как нормальный человек?',
           answer: 'Да, именно для этого и делается операция. Реабилитация обязана' +
             ' пройти качественно и полноценно, независимо от локализации вмешательства'
         },
         {
+          open: false,
           accordion: 'accordion-4',
           question: 'Как долго я буду находиться в лежачем положении после операции?',
           answer: 'Каждый пациент индивидуален, но в большинстве случаев активизация происходит' +
             ' через несколько часов после операции'
         },
         {
+          open: false,
           accordion: 'accordion-5',
           question: 'Бывают ли осложнения после операции, как часто?',
           answer: 'Как и у любого медицинского вмешательства, теоретически возможны разные осложнения.' +
@@ -172,6 +179,10 @@ export default {
   background: #20B6D8;
   box-shadow: 0 12.3095px 22.381px rgba(32, 182, 216, 0.29);
   border-radius: 100%;
+}
+
+.active {
+  transform: rotate(180deg);
 }
 
 </style>
