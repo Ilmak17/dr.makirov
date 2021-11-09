@@ -23,6 +23,7 @@ export default {
     return {
       team: [
         {
+
           img: require("@/static/images/team/img1.png"),
           name: 'Голубева Анна Сергеевна',
           post: 'Врач травматолог-ортопед, вертебролог'
