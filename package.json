@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "2gis-maps": "3.6.6",
+    "@animxyz/core": "^0.6.4",
+    "@animxyz/vue": "^0.6.4",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/proxy": "^2.1.0",

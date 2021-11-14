@@ -1,11 +1,11 @@
 <template>
   <nav>
     <div class="container d-flex justify-content-between">
-      <a class="nav__link" v-for="item in navItems"
-         @click="openSection(item.path)"
-         :key="item.id">
-        {{ item.name }}
-      </a>
+        <a class="nav__link" v-for="item in navItems"
+           @click="openSection(item.path)"
+           :key="item.id">
+          {{ item.name }}
+        </a>
     </div>
   </nav>
 
@@ -62,6 +62,11 @@ nav {
   margin-top: 35px;
   padding: 15px 0 20px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.13), inset 0 12px 12px rgba(255, 255, 255, 0.08);
+
+  @media (max-width: 1290px) {
+    margin-top: 28px;
+    padding: 12px 0 13px;
+  }
 }
 
 .nav__link {
@@ -74,6 +79,10 @@ nav {
     text-decoration: none;
     color: #1ca3ba;
     cursor: pointer;
+  }
+
+  @media (max-width: 1290px) {
+    font-size: 18px;
   }
 }
 </style>

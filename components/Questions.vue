@@ -11,10 +11,15 @@
               <b-card-header header-tag="header" role="tab">
                 <b-button @click="item.open = !item.open"
                   block v-b-toggle="`${item.accordion}`" class="card__button" variant="info">
-                  {{ item.question }}
-                  <div class="arrow">
-                    <img v-bind:class="{ active: item.open }"
-                      src="/images/questions/arrow.svg" alt="arrow">
+
+                  <div class="accordion__question">
+                    {{ item.question }}
+                  </div>
+                  <div class="arrow when-open">
+                      <img class="active" src="/images/questions/arrow.svg" alt="arrow">
+                  </div>
+                  <div class="arrow when-closed">
+                    <img src="/images/questions/arrow.svg" alt="arrow">
                   </div>
                 </b-button>
               </b-card-header>
@@ -93,11 +98,28 @@ export default {
   padding-bottom: 152px;
   background: url("/images/questions/bg.jpg");
   background-size: cover;
+
+  @media (max-width: 1290px) {
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 900px) {
+    background: url("/images/questions/bg2.jpg");
+    background-size: cover;
+  }
+
+  @media (max-width: 380px) {
+    padding-bottom: 70px;
+  }
 }
 
 .questions__inner {
   margin-top: 64px;
-  padding-bottom: 141px;
+  padding-bottom: 101px;
+
+  @media (max-width: 1290px) {
+    padding-bottom: 37px;
+  }
 }
 
 .card {
@@ -106,6 +128,20 @@ export default {
   box-shadow: 0 7px 30px rgba(0, 0, 0, 0.06);
   border-radius: 40px;
   color: #003D4A;
+
+  @media (max-width: 1290px) {
+    margin-bottom: 34px;
+    box-shadow: 0 6.02326px 25.814px rgba(0, 0, 0, 0.06);
+    border-radius: 86.0465px;
+  }
+
+  @media (max-width: 980px) {
+    padding-bottom: 37px;
+    box-shadow: none;
+    background: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.17);
+  }
 }
 
 .card-header {
@@ -113,6 +149,11 @@ export default {
   background: #FFFFFF;
   box-shadow: 0 7px 30px rgba(0, 0, 0, 0.06);
   border: none;
+
+  @media (max-width: 980px) {
+    box-shadow: none;
+    background: none;
+  }
 }
 
 .card__button {
@@ -128,19 +169,24 @@ export default {
 
   &:hover {
     background: #FFFFFF;
-    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.06);
     border: none;
-    font-size: 24px;
-    font-weight: 600;
     color: #003D4A;
+
+    @media (max-width: 980px) {
+      background: none;
+    }
   }
 
   &:focus {
     background: #FFFFFF;
     box-shadow: 0 7px 30px rgba(0, 0, 0, 0.06);
     border: none;
-  }
 
+    @media (max-width: 980px) {
+      background: none;
+      box-shadow: none;
+    }
+  }
 
   &:active, &:focus {
     color: #003D4A;
@@ -149,6 +195,20 @@ export default {
   &:visited {
     color: #003D4A;
   }
+
+  @media (max-width: 1290px) {
+    padding: 16px 43px 18px 52px;
+    font-size: 20px;
+  }
+
+  @media (max-width: 980px) {
+    padding: 0 5px 0 0;
+    background: none;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 18px;
+  }
 }
 
 .btn-info:not(:disabled):not(.disabled):active:focus,
@@ -156,12 +216,21 @@ export default {
   box-shadow: 0 7px 30px rgba(0, 0, 0, 0.06);
   color: #003D4A;
 
+  @media (max-width: 980px) {
+    box-shadow: none;
+  }
 }
+
 .btn-info:not(:disabled):not(.disabled):active,
 .btn-info:not(:disabled):not(.disabled).active, .show > .btn-info.dropdown-toggle {
   background: #FFFFFF;
   box-shadow: 0 7px 30px rgba(0, 0, 0, 0.06);
   color: #003D4A;
+
+  @media (max-width: 980px) {
+    background: none;
+    box-shadow: none;
+  }
 }
 
 .card-body {
@@ -169,6 +238,32 @@ export default {
   background: #FFFFFF;
   font-size: 22px;
   font-weight: 400;
+
+  @media (max-width: 1290px) {
+    padding: 0 193px 30px 52px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 980px) {
+    background: none;
+    text-align: left;
+    line-height: 1.2;
+    padding: 37px 280px 0 0;
+  }
+
+  @media (max-width: 790px) {
+    padding-right: 200px;
+  }
+
+  @media (max-width: 600px) {
+    padding-right: 100px;
+  }
+
+  @media (max-width: 400px) {
+    padding-top: 20px;
+    padding-right: 50px;
+    font-size: 16px;
+  }
 }
 
 .arrow {
@@ -179,10 +274,30 @@ export default {
   background: #20B6D8;
   box-shadow: 0 12.3095px 22.381px rgba(32, 182, 216, 0.29);
   border-radius: 100%;
+
+  @media (max-width: 1290px) {
+    padding: 17px 14px 15px;
+    width: 40.44px;
+    height: 40.44px;
+  }
+}
+
+.accordion__question {
+  @media (max-width: 980px) {
+    width: 100%;
+    max-width: 361px;
+    line-height: 1.2;
+    text-align: left;
+  }
 }
 
 .active {
   transform: rotate(180deg);
+}
+
+.collapsed > .when-open,
+.not-collapsed > .when-closed {
+  display: none;
 }
 
 </style>

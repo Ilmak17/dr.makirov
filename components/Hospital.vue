@@ -53,6 +53,26 @@ export default {
           disableOnInteraction: false,
         },
         speed: 1000,
+        breakpoints: {
+          1000: {
+            slidesPerView: 3,
+          },
+          850: {
+            slidesPerView: 2.3,
+          },
+          750: {
+            slidesPerView: 2,
+          },
+          600: {
+            slidesPerView: 1.5,
+          },
+          455: {
+            slidesPerView: 1.2,
+          },
+          320: {
+            slidesPerView: 1,
+          }
+        },
       }
     }
   }
@@ -71,15 +91,59 @@ export default {
   font-size: 40px;
   font-weight: 600;
   color: #FFFFFF;
+
+  @media (max-width: 1290px) {
+    font-size: 28px;
+    padding-top: 70px;
+    padding-bottom: 37px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 27px;
+    padding-top: 72px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 20px;
+    padding-top: 55px;
+  }
 }
 
 .slider {
  padding-bottom: 100px;
+
+  @media (max-width: 1290px) {
+    padding-bottom: 87px;
+  }
+
+  @media (max-width: 450px) {
+    padding-bottom: 50px;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 
 .slide {
   width: 410px;
   height: 259px;
   border-radius: 10.5607px;
+
+  @media (max-width: 1290px) {
+    width: 350px;
+    height: 215px;
+  }
+
+  @media (max-width: 450px) {
+    width: 300px;
+    height: 180px;
+  }
+  @media (max-width: 350px) {
+    width: 280px;
+    height: 150px;
+  }
+
 }
 </style>

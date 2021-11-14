@@ -8,12 +8,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=0' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Современные методы лечения заболеваний позвоночника' },
       { name: 'format-detection', content: 'telephone=no' },
-      // {hid: 'og:image', property: 'og:image', content: 'https://agency.bi.group/favicon-min.png'}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon (1).ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/images/Group-654.ico' },
     ],
     script: [
       { defer: 'true', src: 'https://maps.api.2gis.ru/2.0/loader.js?pkg=full' }
@@ -41,7 +40,7 @@ export default {
     { src: '~/plugins/vue-mask', mode: 'client' },
     { src: '~/plugins/vueMask', mode: 'client' },
     { src: '~/plugins/yandexMap', mode: 'client' },
-
+    { src: '~/plugins/animxyz', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

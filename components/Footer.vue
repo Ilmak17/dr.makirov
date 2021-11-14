@@ -22,11 +22,11 @@
         </div>
 
         <div class="second__line d-flex justify-content-between">
-          <div class="footer__address d-flex justify-content-between">
+          <div class="footer__address d-flex justify-content-between align-items-center">
             <img src="/images/footer/place.svg" class="icon transform" alt="place">
             ул. Госпитальная площадь дом 2 стр 1
           </div>
-          <div class="footer__address d-flex justify-content-between">
+          <div class="footer__address d-flex justify-content-between align-items-center">
             <img src="/images/footer/place.svg" class="icon transform" alt="place">
             ул. Госпитальная площадь дом 2 стр 1
           </div>
@@ -106,21 +106,61 @@ footer {
 
 .footer__inner {
   padding: 125px 0 80px;
+
+  @media (max-width: 1290px) {
+    padding: 89px 0 80px;
+  }
+}
+
+.footer__logo > img {
+
+  @media (max-width: 1290px) {
+    width: 160px;
+    height: 40.49px;
+  }
 }
 
 .footer__info {
   margin-left: auto;
   width: 100%;
   max-width: 675px;
+  display: flex;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
 
 .icon {
   margin-right: 14px;
+
+  @media (max-width: 1290px) {
+    margin-right: 12px;
+  }
 }
 
 .footer__city {
   font-size: 22px;
   font-weight: 600;
+
+  & > img {
+    @media (max-width: 1290px) {
+      width: 17px;
+      height: 22px;
+    }
+  }
+
+  @media (max-width: 1290px) {
+    font-size: 20px;
+  }
+}
+
+.footer__tel > img {
+
+  @media (max-width: 1290px) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .footer__phone {
@@ -132,19 +172,49 @@ footer {
     color: #e3dcdc;
     text-decoration: none;
   }
+
+  @media (max-width: 1290px) {
+    font-size: 25px;
+  }
+}
+
+.footer__insta {
+  @media (max-width: 1290px) {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .second__line {
   margin-top: 75px;
+
+  @media (max-width: 1290px) {
+    margin-top: 63px;
+  }
 }
 
 .footer__address {
   font-size: 24px;
   font-weight: 400;
+
+  & > img {
+    @media (max-width: 1290px) {
+      width: 19px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: 1290px) {
+    font-size: 20px;
+  }
 }
 
 .footer__nav {
   margin-top: 77px;
+
+  @media (max-width: 1290px) {
+    margin-top: 69px;
+  }
 }
 
 .nav__link {
@@ -157,6 +227,10 @@ footer {
     text-decoration: none;
     color: #eae3e3;
   }
+
+  @media (max-width: 1290px) {
+    font-size: 18px;
+  }
 }
 
 .line {
@@ -164,6 +238,10 @@ footer {
   max-width: 219px;
   border-top: 2px solid rgba(255, 255, 255, 0.44);
   border-radius: 3px;
+
+  @media (max-width: 1290px) {
+    max-width: 173px;
+  }
 }
 
 .copyright {
@@ -173,6 +251,10 @@ footer {
 .copyright__item {
   font-size: 19px;
   font-weight: 400;
+
+  @media (max-width: 1290px) {
+    font-size: 17px;
+  }
 }
 
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="address" id="Address">
-    <div class="container d-flex justify-content-between">
+    <div class="container">
       <div class="address__inner">
-        <div class="title text-left text-white">Наш адрес</div>
+        <div class="title text-white">Наш адрес</div>
 
         <div class="address__item">
           <div class="address__text d-flex">
@@ -32,26 +32,27 @@
           </div>
         </div>
       </div>
-      <div id="app">
-        <no-ssr>
-          <yandex-map
-            ref="map"
-            :coords="[55.766293, 37.700496]"
-            zoom="11"
-            class="yandex__map"
-            :controls="[]"
-          >
-            <ymap-marker
-              v-for="n in markers"
-              :key="n.id"
-              :marker-id="n.id"
-              marker-type="placemark"
-              :coords="n.coord"
-              :balloon="{ body: n.text }"
-            ></ymap-marker>
-          </yandex-map>
-        </no-ssr>
-      </div>
+    </div>
+
+    <div id="app">
+      <no-ssr>
+        <yandex-map
+          ref="map"
+          :coords="[55.766293, 37.700496]"
+          zoom="11"
+          class="yandex__map"
+          :controls="[]"
+        >
+          <ymap-marker
+            v-for="n in markers"
+            :key="n.id"
+            :marker-id="n.id"
+            marker-type="placemark"
+            :coords="n.coord"
+            :balloon="{ body: n.text }"
+          ></ymap-marker>
+        </yandex-map>
+      </no-ssr>
     </div>
   </div>
 </template>
@@ -60,7 +61,7 @@
 import {yandexMap, ymapMarker} from 'vue-yandex-maps'
 
 export default {
-  name: "Address",
+  name: "AddressMobile",
   components: {
     yandexMap, ymapMarker
   },
@@ -83,98 +84,112 @@ export default {
 <style scoped lang="scss">
 
 .yandex__map {
-  width: 630px;
-  height: 700px;
+  width: 100%;
+  height: 520px;
 
-  @media (max-width: 1290px) {
-    width: 540px;
-    height: 552px;
+  @media (max-width: 600px) {
+    height: 491px;
   }
 
-  @media (max-width: 950px) {
-    width: 500px;
-    height: 510px;
+  @media (max-width: 450px) {
+    height: 400px;
+  }
+
+  @media (max-width: 350px) {
+    height: 350px;
   }
 }
 
 .address {
-  background: url("/images/address/bg.jpg");
+  background: url("/images/address/bg2.jpg") center;
   background-size: cover;
 }
 
 .address__item {
-  margin-top: 65px;
+  padding-top: 54px;
+  padding-bottom: 74px;
 
-  @media (max-width: 1290px) {
-    padding-top: 30px;
+  @media (max-width: 600px) {
+    padding-bottom: 65px;
+  }
+
+  @media (max-width: 450px) {
+    padding-bottom: 30px;
   }
 }
 
 .address__text {
   width: 100%;
   max-width: 450px;
-  margin-bottom: 36px;
-  font-size: 28px;
+  margin-bottom: 50px;
+  font-size: 24px;
   font-weight: 400;
 
-  @media (max-width: 1290px) {
-    margin-bottom: 50px;
+  @media (max-width: 600px) {
     font-size: 20px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 17px;
   }
 }
 
 .address__text__img {
-  margin-right: 31px;
+  margin-right: 29px;
 
   & > img {
-    @media (max-width: 1290px) {
       width: 16px;
       height: 19px;
-    }
   }
 
-  @media (max-width: 1290px) {
-    margin-right: 25px;
+  @media (max-width: 600px) {
+    margin-right: 24px;
+  }
+
+  @media (max-width: 450px) {
+    margin-right: 18px;
   }
 }
 
 .address__tel {
   color: #FFFFFF;
-  font-size: 31px;
+  font-size: 24px;
   font-weight: 600;
 
   &:hover {
     text-decoration: none;
   }
 
-  @media (max-width: 1290px) {
-    font-size: 24px;
+  @media (max-width: 450px) {
+    font-size: 22px;
   }
+
 }
 
 .address__tel__subtitle {
-  margin-top: 23px;
-  font-size: 20px;
+  margin-top: 14px;
+  font-size: 18px;
   font-weight: 400;
 
-  @media (max-width: 1290px) {
-    margin-top: 13px;
+  @media (max-width: 600px) {
     font-size: 16px;
+  }
+
+  @media (max-width: 450px) {
+    margin-top: 10px;
   }
 }
 
 .address__phone__img {
-  margin-right: 25px;
+  margin-right: 22px;
 
   & > img {
-    @media (max-width: 1290px) {
       width: 18.34px;
       height: 18.34px;
-    }
-  }
-
-  @media (max-width: 1290px) {
-    margin-right: 20px;
   }
 }
 </style>

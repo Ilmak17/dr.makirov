@@ -1,24 +1,29 @@
 <template>
   <header>
     <div class="container d-flex align-items-center">
-      <div class="header__logo">
-       <img src="/images/logo.png" alt="logo">
-      </div>
-      <div class="header__info d-flex justify-content-between align-items-center">
+      <XyzTransition appear xyz="fade up big">
+        <div class="header__logo">
+          <img src="/images/logo.png" alt="logo">
+        </div>
+      </XyzTransition>
+
+      <XyzTransition appear  xyz="fade in big">
+        <div class="header__info d-flex justify-content-between align-items-center">
         <div class="header__city d-flex">
           <img src="/images/place.svg" class="icon transform" alt="place">
           Москва
         </div>
-        <div class="header__phone d-flex">
+        <div class="header__phone d-flex align-items-center">
           <img src="/images/phone.svg" class="icon transform" alt="phone">
           <a class="header__phone" href="tel:84953613226">8 (495) 361 32 26</a>
         </div>
         <div class="header__instagram">
           <a href="https://www.instagram.com/dr.makirov">
-            <img class="transform" src="/images/instagram.svg" alt="instagram">
+            <img class="insta transform" src="/images/instagram.svg" alt="instagram">
           </a>
         </div>
       </div>
+      </XyzTransition>
     </div>
   </header>
 </template>
@@ -34,8 +39,23 @@ header {
   padding-top: 33px;
 }
 
+.header__logo > img {
+  @media (max-width: 1290px) {
+    width: 160px;
+    height: 40.49px;
+  }
+
+  @media (max-width: 790px) {
+    margin-right: 10px;
+  }
+}
+
 .icon {
   margin-right: 14px;
+
+  @media (max-width: 1290px) {
+    margin-right: 12px;
+  }
 }
 
 .header__info {
@@ -48,6 +68,17 @@ header {
   font-weight: 600;
   font-size: 22px;
   color: #003D4A;
+
+  & > img {
+    @media (max-width: 1290px) {
+      width: 17px;
+      height: 22px;
+    }
+  }
+
+  @media (max-width: 1290px) {
+    font-size: 20px;
+  }
 }
 
 .header__phone {
@@ -55,9 +86,27 @@ header {
   color: #003D4A;
   font-size: 31px;
 
+  & > img {
+    @media (max-width: 1290px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   &:hover {
     text-decoration: none;
     color: #196274;
+  }
+
+  @media (max-width: 1290px) {
+    font-size: 25px;
+  }
+}
+
+.insta {
+  @media (max-width: 1290px) {
+    width: 32px;
+    height: 32px;
   }
 }
 </style>

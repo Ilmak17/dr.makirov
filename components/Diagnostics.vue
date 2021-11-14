@@ -66,6 +66,10 @@ export default {
 .diagnostic__about {
   padding-top: 58px;
   padding-bottom: 140px;
+
+  @media (max-width: 1290px) {
+    padding-bottom: 50px;
+  }
 }
 
 .diagnostic__item {
@@ -74,6 +78,10 @@ export default {
   &:last-child {
     margin-bottom: 0;
   }
+  @media (max-width: 1290px) {
+    margin-bottom: 42px;
+  }
+
 }
 
 .diagnostic__line {
@@ -85,12 +93,23 @@ export default {
   max-width: 62px;
   height: 0;
   border-radius: 3px;
+
+  @media (max-width: 1290px) {
+    width: 33px;
+    margin-right: 12px;
+    margin-top: 10px;
+  }
 }
 
 .diagnostic__title {
   font-size: 34px;
   font-weight: 500;
   color: #003D4A;
+
+
+  @media (max-width: 1290px) {
+    font-size: 20px;
+  }
 }
 
 .diagnostic__item__text {
@@ -100,19 +119,40 @@ export default {
   font-weight: 400;
   color: #003D4A;
   line-height: 1.2;
+
+
+  @media (max-width: 1290px) {
+    margin-top: 12px;
+    font-size: 20px;
+  }
 }
 
 .item-1 {
   margin-left: 53px;
+
+
+  @media (max-width: 1290px) {
+    margin-left: 160px;
+  }
 }
 
 .item-2 {
-  margin-left: 180px;
+  margin-left: 160px;
+
+  @media (max-width: 1290px) {
+    margin-left: 200px;
+  }
 }
 
-.item-2 {
-  margin-left: 180px;
+.item-3 {
+  @media (max-width: 1290px) {
+    margin-left: 100px;
+  }
 }
 
+.diagnostic__img > img {
+  width: 340px;
+  height: 350px;
+}
 
 </style>

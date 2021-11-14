@@ -31,6 +31,15 @@ export default {
 
 .request__inner {
   padding: 80px 0;
+
+  @media (max-width: 1290px) {
+    padding: 68px 0;
+  }
+
+  @media (max-width: 900px) {
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .request__title {
@@ -38,12 +47,39 @@ export default {
   font-size: 32px;
   font-weight: 600;
   color: #FFFFFF;
+
+  @media (max-width: 1290px) {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 900px) {
+    margin-bottom: 23px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 22px;
+  }
 }
 
 .request__subtitle {
   font-size: 28px;
   font-weight: 400;
   color: #FFFFFF;
+
+  @media (max-width: 1290px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 900px) {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 32px;
+  }
 }
 
 .btn {
@@ -58,5 +94,27 @@ export default {
   &:hover {
     background: #41afc5;
   }
+
+  @media (max-width: 1290px) {
+    font-size: 18px;
+    padding: 16px 24px 18px;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 22px;
+    padding: 19px 51px 16px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+    padding: 16px 30px 18px;
+  }
+
+  @media (max-width: 450px) {
+    margin-top: 30px;
+    font-size: 16px;
+    padding: 12px 25px 14px;
+  }
+
 }
 </style>

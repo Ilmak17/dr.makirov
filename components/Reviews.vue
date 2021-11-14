@@ -5,9 +5,9 @@
     </div>
     <swiper :options="swiperOption" class="slider">
       <swiper-slide v-for="(item, index) in reviews" :key="index">
-        <div class="cart">
+        <div class="card">
           <div class="d-flex justify-content-between align-items-center">
-            <div class="cart__title">{{ item.name }}</div>
+            <div class="card__title">{{ item.name }}</div>
             <div class="card__quote">
             </div>
           </div>
@@ -51,21 +51,18 @@ export default {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
           clickable: true
-        }
-        // breakpoints: {
-        //   1440: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 40,
-        //   },
-        //   768: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30,
-        //   },
-        //   320: {
-        //     slidesPerView: 1,
-        //     spaceBetween: 10,
-        //   },
-        // },
+        },
+        breakpoints: {
+          1110: {
+            slidesPerView: 2,
+          },
+          900: {
+            slidesPerView: 1.6,
+          },
+          320: {
+            slidesPerView: 1,
+          },
+        },
       },
       reviews: [
         {
@@ -187,32 +184,120 @@ export default {
   background: url("/images/reviews/bg.jpg");
   background-size: cover;
   padding-bottom: 100px;
+
+  @media (max-width: 1290px) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 600px) {
+    background: url("/images/reviews/bg2.jpg");
+    background-size: cover;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 410px) {
+    padding-bottom: 40px;
+  }
 }
 
-.cart {
+.card {
   padding: 60px 41px 0 62px;
   width: 600px;
   height: 720px;
   background: #FFFFFF;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  border-radius: 10px
+  border-radius: 10px;
+
+  @media (max-width: 1290px) {
+    padding: 21px 43px 0 50px;
+    width: 540px;
+    height: 590px;
+    border-radius: 8.13178px;
+    box-shadow: 0 16.2636px 32.5271px rgba(0, 0, 0, 0.1);
+  }
+
+
+  @media (max-width: 600px) {
+    padding: 69px 62px 0 59px;
+    width: 450px;
+    height: 750px;
+    box-shadow: 0 16.2636px 32.5271px rgba(0, 0, 0, 0.1);
+    border-radius: 8.13178px
+  }
+
+  @media (max-width: 450px) {
+    width: 420px;
+    height: 700px;
+  }
+
+  @media (max-width: 410px) {
+    padding: 30px 28px 0 25px;
+    width: 380px;
+    height: 450px;
+  }
+
+  @media (max-width: 380px) {
+    padding: 20px 20px 0 18px;
+    width: 350px;
+    height: 480px;
+  }
+
+  @media (max-width: 350px) {
+    padding: 20px 15px 0 13px;
+    width: 300px;
+    height: 400px;
+  }
 }
 
-.cart__title {
+.card__title {
   font-size: 28px;
   font-weight: 500;
   color: #003D4A;
+
+  @media (max-width: 1290px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 410px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 16px;
+  }
+
 }
 
 .card__quote {
   width: 81px;
   height: 68px;
 
+  @media (max-width: 600px) {
+    width: 70px;
+    height: 60px;
+  }
+
   &::after {
     content: "\201c";
     font-size: 176px;
     font-weight: 600;
     color: rgba(1, 151, 184, 0.17);
+
+    @media (max-width: 1290px) {
+      font-size: 143px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 120px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 100px;
+    }
   }
 }
 
@@ -221,6 +306,23 @@ export default {
   font-size: 22px;
   font-weight: 400;
   color: #003D4A;
+
+  @media (max-width: 1290px) {
+    font-size: 18px
+  }
+
+  @media (max-width: 450px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 410px) {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 12px;
+  }
 }
 
 .slider {
@@ -228,6 +330,20 @@ export default {
   padding-bottom: 120px;
   width: 100%;
   max-width: 1300px;
+
+  @media (max-width: 1290px) {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 600px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 410px) {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
 }
 
 .swiper-slide {
@@ -238,11 +354,19 @@ export default {
 .swiper-button-prev {
   padding: 19px 24px 19px 20px;
   left: 2%;
+
+  @media (max-width: 1290px) {
+    left: 5%;
+  }
 }
 
 .swiper-button-next {
   padding: 19px 21px 19px 24px;
   right: 2%;
+
+  @media (max-width: 1290px) {
+    right: 5%;
+  }
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -259,6 +383,15 @@ export default {
   }
 
   &::after {
+    display: none;
+  }
+
+  @media (max-width: 1290px) {
+    width: 47.16px;
+    height: 47.16px;
+  }
+
+  @media (max-width: 900px) {
     display: none;
   }
 }

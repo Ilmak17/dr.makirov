@@ -67,6 +67,17 @@ export default {
           disableOnInteraction: false,
         },
         speed: 1000,
+        breakpoints: {
+          1000: {
+            slidesPerView: 3,
+          },
+          600: {
+            slidesPerView: 2,
+          },
+          320: {
+            slidesPerView: 1,
+          }
+        },
       }
     }
   }
@@ -80,11 +91,40 @@ export default {
   font-size: 40px;
   font-weight: 600;
   color: #003D4A;
+
+  @media (max-width: 1290px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 27px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 
 .swiper-slide > img {
   width: 410px;
   height: 284px;
+
+  @media (max-width: 1290px) {
+    width: 350px;
+    height: 244px;
+  }
+
+  @media (max-width: 380px) {
+    width: 300px;
+    height: 220px;
+  }
 }
 
 </style>

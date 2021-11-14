@@ -1,7 +1,7 @@
 <template>
   <div class="team" id="Team">
     <div class="container">
-      <div class="title">Наша команда врачей </div>
+      <div class="title">Наша команда врачей</div>
       <div class="team__items d-flex justify-content-between flex-wrap">
         <div class="team__item text-center" v-for="(item, key) in team" :key="key">
           <div class="item__img">
@@ -54,19 +54,92 @@ export default {
 .team {
   background: url("/images/team/bg.jpg");
   background-size: cover;
+
+  @media (max-width: 830px) {
+    background: url("/images/team/bg2.jpg");
+    background-size: cover;
+  }
+
+  @media (max-width: 600px) {
+    background: url("/images/team/bg3.jpg");
+    background-size: cover;
+  }
+}
+
+.title {
+  @media (max-width: 790px) {
+    text-align: left;
+  }
 }
 
 .team__items {
   padding: 20px 0 164px;
+
+  @media (max-width: 1290px) {
+    padding: 70px 0;
+  }
+
+  @media (max-width: 790px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-width: 450px) {
+    padding: 20px 0 50px;
+  }
+
 }
 
 .team__item {
 
   &:nth-child(3) {
     margin-top: 40px;
+
+    @media (max-width: 1290px) {
+      margin-top: 78px;
+    }
+
+    @media (max-width: 790px) {
+      margin-top: 0;
+    }
   }
+
   &:nth-child(4) {
     margin-top: 40px;
+
+    @media (max-width: 1290px) {
+      margin-top: 78px;
+    }
+
+    @media (max-width: 790px) {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 790px) {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.item__img > img {
+  @media (max-width: 1290px) {
+    width: 400px;
+    height: 406px;
+  }
+
+  @media (max-width: 900px) {
+    width: 340px;
+    height: 346px;
+  }
+
+  @media (max-width: 830px) {
+    width: 295.3px;
+    height: 300px;
   }
 }
 
@@ -75,11 +148,37 @@ export default {
   font-size: 28px;
   font-weight: 500;
   color: #003D4A;
+
+  @media (max-width: 1290px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 830px) {
+    margin: 0 auto 13px;
+    max-width: 227px;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 500px;
+    margin: 0 auto 13px;
+  }
 }
 
 .item__post {
   font-size: 22px;
   font-weight: 400;
   color: #003D4A;
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+
+  @media (max-width: 1290px) {
+    font-size: 20px;
+  }
 }
 </style>
