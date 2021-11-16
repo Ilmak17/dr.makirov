@@ -3,13 +3,11 @@
     <Header v-if="windowSize > 600"/>
     <HeaderMobile v-if="windowSize <= 600"/>
 
-    <div class="tel-bt" v-if="windowSize <= 600">
-      <a href="tel:84953613226">
-        <div class="text-call">
-          <img src="/images/tel.svg" alt="phone">
-        </div>
-      </a>
-    </div>
+    <a href="tel:84953613226" class="tel-bt" v-if="windowSize <= 600">
+      <div class="text-call">
+        <img src="/images/tel.svg" alt="phone">
+      </div>
+    </a>
 
     <Nav v-if="windowSize > 800"/>
     <Intro/>
