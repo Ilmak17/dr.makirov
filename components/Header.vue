@@ -11,7 +11,7 @@
         <div class="header__info d-flex justify-content-between align-items-center">
         <div class="header__city d-flex">
           <img src="/images/place.svg" class="icon transform" alt="place">
-          afsdf
+          Москва
         </div>
         <div class="header__phone d-flex align-items-center">
           <img src="/images/phone.svg" class="icon transform" alt="phone">
