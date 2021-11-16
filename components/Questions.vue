@@ -277,8 +277,8 @@ export default {
 
   @media (max-width: 1290px) {
     padding: 17px 12px 15px 14px;
-    width: 40.44px;
-    height: 40.44px;
+    width: 42px;
+    height: 42px;
   }
 }
 
