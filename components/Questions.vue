@@ -276,9 +276,9 @@ export default {
   border-radius: 100%;
 
   @media (max-width: 1290px) {
-    padding: 17px 12px 15px 14px;
-    width: 42px;
-    height: 42px;
+    padding: 17px 14px 15px;
+    width: 40px;
+    height: 40px;
   }
 }
 
