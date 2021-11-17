@@ -8,7 +8,6 @@
         <img src="/images/tel.svg" alt="phone">
       </div>
     </a>
-
     <Nav v-if="windowSize > 800"/>
     <Intro/>
     <AboutMe/>
@@ -170,7 +169,7 @@ export default {
     showSecondModal(event) {
       event.preventDefault()
       if (this.form.phone !== "") {
-        axios.post("http://localhost:8080/send", this.form)
+        axios.post("https://drmakirov.herokuapp.com/send", this.form)
           .then((data) => {
             if (data.status === 201 || data.status === 200) {
               this.$refs["my-modal"].hide();
@@ -371,7 +370,7 @@ p {
   font-size: 18px;
   font-weight: 600;
   background: #03CCC1;
-  box-shadow: 9px 20px 40px rgba(3, 204, 193, 0.35);
+  box-shadow: 5px 10px 20px rgba(3, 204, 193, 0.35);
   border-radius: 40px;
   outline: none;
   border: none;
@@ -398,7 +397,7 @@ p {
   margin-top: 15px;
   font-size: 14px;
   font-weight: 400;
-  color: #000000;
+  color: rgba(0, 0, 0, 0.5);
 
   @media (max-width: 400px) {
     margin-top: 10px;

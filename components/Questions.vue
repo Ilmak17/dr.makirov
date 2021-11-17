@@ -276,9 +276,16 @@ export default {
   border-radius: 100%;
 
   @media (max-width: 1290px) {
-    padding: 17px 14px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
+
+    & > img {
+      width: 16px;
+      height: 10px;
+    }
   }
 }
 
