@@ -52,34 +52,20 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
-    '@nuxtjs/gtm'
+    '@nuxtjs/gtm',
+    'nuxt-robots-module'
   ],
     gtm: {
     id: 'GTM-P7CJ6Q5'
   },
-  // proxy: {
-  //   '/rbd_api': {
-  //     target: process.env.RBD_API_URL, pathRewrite: { '^/rbd_api': '' },
-  //     headers: {
-  //       api_key: process.env.RBD_API_KEY
-  //     }
-  //   },
-  //   '/rbd_leads_api': {
-  //     target: process.env.RBD_API_URL, pathRewrite: { '^/rbd_leads_api': '' },
-  //     headers: {
-  //       api_key: process.env.RBD_BI_LEADS_API_KEY
-  //     }
-  //   }
-  // },
-  // env: {
-  //   DOMKZ_URL: process.env.DOMKZ_URL,
-  //   DOMKZ_API_URL: process.env.DOMKZ_API_URL
-  // },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/user',
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
