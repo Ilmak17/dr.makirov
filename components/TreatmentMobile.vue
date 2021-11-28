@@ -1,8 +1,8 @@
 <template>
   <div class="treatment">
-    <div class="container">
+    <div class="container" id="TreatmentMobile">
       <div class="treatment__title">
-        Лечение
+        Заболевания
       </div>
       <div class="treatment__inner d-flex flex-column">
 

@@ -7,22 +7,23 @@
         </div>
       </XyzTransition>
 
-      <XyzTransition appear  xyz="fade in big">
+      <XyzTransition appear xyz="fade in big">
         <div class="header__info d-flex justify-content-between align-items-center">
-        <div class="header__city d-flex">
-          <img src="/images/place.svg" class="icon transform" alt="place">
-          Москва
-        </div>
-        <div class="header__phone d-flex align-items-center">
-          <img src="/images/phone.svg" class="icon transform" alt="phone">
-          <a class="header__phone" href="tel:84953613226">8 (495) 361 32 26</a>
-        </div>
-        <div class="header__instagram">
+          <div class="header__city d-flex" @click="openAddress">
+            <img src="/images/place.svg" class="icon transform" alt="place">
+            Москва
+          </div>
+          <div class="header__phone d-flex align-items-center">
+            <img src="/images/phone.svg" class="icon transform" alt="phone">
+            <a class="header__phone" href="tel:84956625885">8 (495) 662-58-85</a>
+          </div>
+          <a href="https://www.youtube.com/channel/UC_naXlwqsuWZPU5qSuXsZRg">
+            <img class="youtube transform" src="/images/youtube.svg" alt="youtube">
+          </a>
           <a href="https://www.instagram.com/dr.makirov">
             <img class="insta transform" src="/images/instagram.svg" alt="instagram">
           </a>
         </div>
-      </div>
       </XyzTransition>
     </div>
   </header>
@@ -30,7 +31,15 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+
+  methods: {
+    openAddress() {
+      let services = document.getElementById("Address");
+      let top = window.scrollY + services.getBoundingClientRect().y - 100;
+      window.scrollTo({left: 0, top, behavior: 'smooth'});
+    }
+  }
 }
 </script>
 
@@ -65,6 +74,7 @@ header {
 }
 
 .header__city {
+  cursor: pointer;
   font-weight: 600;
   font-size: 22px;
   color: #003D4A;
@@ -103,10 +113,4 @@ header {
   }
 }
 
-.insta {
-  @media (max-width: 1290px) {
-    width: 32px;
-    height: 32px;
-  }
-}
 </style>

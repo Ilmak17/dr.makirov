@@ -4,7 +4,7 @@
       <div class="request__inner d-flex align-items-center justify-content-between">
         <div class="request__text">
           <div class="request__title">
-            Запишитесь на прием и пройдите диагностику
+            Запишитесь на прием и избавьтесь от боли в позвоночнике
           </div>
           <div class="request__subtitle">
             Получите диагностику в день консультации врача
@@ -36,24 +36,24 @@ export default {
     padding: 68px 0;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     justify-content: center;
     flex-direction: column;
   }
 }
 
 .request__title {
-  margin-bottom: 16px;
-  font-size: 32px;
+  margin-bottom: 14px;
+  font-size: 28px;
   font-weight: 600;
   color: #FFFFFF;
 
   @media (max-width: 1290px) {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     margin-bottom: 23px;
     text-align: center;
     width: 100%;
@@ -66,7 +66,7 @@ export default {
 }
 
 .request__subtitle {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 400;
   color: #FFFFFF;
 
@@ -74,7 +74,7 @@ export default {
     font-size: 20px;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     text-align: center;
     width: 100%;
     max-width: 400px;
@@ -111,7 +111,6 @@ export default {
   }
 
   @media (max-width: 450px) {
-    margin-top: 30px;
     font-size: 16px;
     padding: 12px 25px 14px;
   }

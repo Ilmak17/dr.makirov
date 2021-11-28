@@ -13,18 +13,27 @@
               метро Бауманская, ул. Госпитальная площадь дом 2 стр 1
             </div>
           </div>
+          <div class="address__phone d-flex mb-4">
+            <div class="address__phone__img">
+              <img src="/images/address/phone.svg" alt="place">
+            </div>
+            <div>
+              <a class="address__tel" href="tel:84953613226">8 (495) 361 32 26</a>
+            </div>
+          </div>
+
           <div class="address__text d-flex">
             <div class="address__text__img">
               <img src="/images/address/place.svg" alt="place">
             </div>
-            метро киевская, улица брянская дом 3, клиника  "Семейная"
+            метро киевская, улица Брянская дом 3, клиника "Семейная"
           </div>
           <div class="address__phone d-flex">
             <div class="address__phone__img">
               <img src="/images/address/phone.svg" alt="place">
             </div>
             <div>
-              <a class="address__tel" href="tel:84953613226">8 (495) 361 32 26</a>
+              <a class="address__tel" href="tel:8495662-58-85">8 (495) 662-58-85</a>
               <div class="address__tel__subtitle">
                 Обращайтесь по всем <br> интересующим Вас вопросам
               </div>
@@ -121,7 +130,7 @@ export default {
 .address__text {
   width: 100%;
   max-width: 450px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 24px;
   font-weight: 400;
 
@@ -142,8 +151,8 @@ export default {
   margin-right: 29px;
 
   & > img {
-      width: 16px;
-      height: 19px;
+    width: 16px;
+    height: 19px;
   }
 
   @media (max-width: 600px) {
@@ -188,8 +197,16 @@ export default {
   margin-right: 22px;
 
   & > img {
-      width: 18.34px;
-      height: 18.34px;
+    width: 18.34px;
+    height: 18.34px;
+  }
+
+  @media (max-width: 600px) {
+    margin-right: 22px;
+  }
+
+  @media (max-width: 450px) {
+    margin-right: 16px;
   }
 }
 </style>

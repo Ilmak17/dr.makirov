@@ -7,9 +7,15 @@
             <img src="/images/footer/logoMobile.png" alt="logo">
           </div>
 
-          <a href="https://www.instagram.com/dr.makirov">
-            <img class="footer__insta transform" src="/images/footer/instagram.svg" alt="">
-          </a>
+          <div class="social d-flex align-items-center">
+            <a href="https://www.youtube.com/channel/UC_naXlwqsuWZPU5qSuXsZRg">
+              <img class="footer__youtube transform" src="/images/footer/youtube.svg" alt="youtube">
+            </a>
+
+            <a href="https://www.instagram.com/dr.makirov">
+              <img class="footer__insta transform" src="/images/footer/instagram.svg" alt="instagram">
+            </a>
+          </div>
         </div>
 
         <div class="footer__second d-flex justify-content-between">
@@ -30,7 +36,7 @@
           </div>
           <div class="footer__address d-flex align-items-center">
             <img src="/images/footer/place.svg" class="icon transform" alt="place">
-            ул. Госпитальная площадь дом 2 стр 1
+            улица Брянская дом 3, клиника "Семейная"
           </div>
         </div>
 
@@ -61,11 +67,6 @@ footer {
   @media (max-width: 400px) {
     padding-top: 50px;
   }
-}
-
-.footer__insta {
-  width: 32px;
-  height: 32px;
 }
 
 .footer__second {
@@ -180,5 +181,13 @@ footer {
 
 .copyright__img {
   margin-top: 5px;
+}
+
+.footer__youtube {
+  margin-right: 53px;
+
+  @media (max-width: 400px) {
+    margin-right: 30px;
+  }
 }
 </style>

@@ -38,8 +38,8 @@ export default {
         },
         {
           id: 2,
-          name: "Вопросы",
-          path: "Questions",
+          name: "Заболевания",
+          path: "Treatment",
         },
         {
           id: 3,

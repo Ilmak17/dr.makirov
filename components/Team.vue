@@ -42,7 +42,12 @@ export default {
           img: require("@/static/images/team/img4.png"),
           name: 'Еникеев Азат Дамирович',
           post: 'Врач травматолог-ортопед, вертебролог'
-        }
+        },
+        {
+          img: require("@/static/images/team/img5.png"),
+          name: 'Отаров Олжас Бекенович',
+          post: 'Врач травматолог-ортопед, вертебролог'
+        },
       ]
     }
   }
@@ -52,7 +57,7 @@ export default {
 
 <style scoped lang="scss">
 .team {
-  background: url("/images/team/bg.jpg");
+  background: url("/images/team/bg.jpg") center;
   background-size: cover;
 
   @media (max-width: 830px) {
@@ -73,7 +78,7 @@ export default {
 }
 
 .team__items {
-  padding: 20px 0 164px;
+  padding: 20px 0 100px;
 
   @media (max-width: 1290px) {
     padding: 70px 0;
@@ -107,6 +112,18 @@ export default {
 
   &:nth-child(4) {
     margin-top: 40px;
+
+    @media (max-width: 1290px) {
+      margin-top: 78px;
+    }
+
+    @media (max-width: 790px) {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-child(5) {
+    margin: 40px auto 0;
 
     @media (max-width: 1290px) {
       margin-top: 78px;

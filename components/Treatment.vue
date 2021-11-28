@@ -1,8 +1,8 @@
 <template>
-  <div class="treatment">
+  <div class="treatment" id="Treatment">
     <div class="container">
       <div class="treatment__inner">
-        <div class="treatment__title">Лечение</div>
+        <div class="treatment__title">Заболевания</div>
         <div class="treatment__item d-flex align-items-center">
           <div class="treatment__spine">
             <img src="/images/treatment/spine.png" alt="spine">

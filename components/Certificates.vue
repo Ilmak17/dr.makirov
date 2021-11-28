@@ -1,5 +1,5 @@
 <template>
-  <div class="certificates">
+  <div class="certificates" id="Certificates">
     <div class="container">
       <div class="certificates__title">
         Сертификаты

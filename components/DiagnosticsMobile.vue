@@ -10,35 +10,33 @@
         <div class="diagnostic__items d-flex flex-column">
           <div class="diagnostic__item">
             <div class="diagnostic__name d-flex align-items-center">
-              <div>Рентгеновский снимок</div>
+              <div>МРТ</div>
               <div class="diagnostic__line"></div>
             </div>
-
             <div class="diagnostic__text">
-              при рентгенологическом <br> исследовании определяется <br>
-              искривление позвоночника и <br> деформация позвонков
+              магнитно-резонансная томография позвоночника
             </div>
           </div>
 
           <div class="diagnostic__item ml-auto">
             <div class="diagnostic__name d-flex align-items-center ">
               <div class="diagnostic__line second"></div>
-              <div>МРТ</div>
+              <div>КТ</div>
             </div>
 
             <div class="diagnostic__text text-right">
-              магнитно-резонансная томография позвоночника
+              компьютерная томография позвоночника
             </div>
           </div>
 
           <div class="diagnostic__item">
             <div class="diagnostic__name d-flex align-items-center">
-              <div>КТ</div>
+              <div>Рентгеновский снимок</div>
               <div class="diagnostic__line"></div>
             </div>
 
             <div class="diagnostic__text">
-              компьютерная томография позвоночника
+              рентгеновский снимок позвоночника
             </div>
           </div>
         </div>
@@ -55,8 +53,13 @@ export default {
 
 <style scoped lang="scss">
 .diagnostic {
-  background: url("/images/diagnostics/bg2.jpg") center;
+  background: url("/images/diagnostics/bg2.jpg");
   background-size: cover;
+
+  @media (max-width: 600px) {
+    background: url("/images/diagnostics/bg3.jpg");
+    background-size: cover;
+  }
 }
 
 .diagnostic__inner {
@@ -89,7 +92,7 @@ export default {
   color: #003D4A;
   width: 100%;
   max-width: 480px;
-  margin-bottom: 5px;
+  margin-bottom: 40px;
 
   &:last-child {
     margin-bottom: 0;

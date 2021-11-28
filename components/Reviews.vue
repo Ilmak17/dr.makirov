@@ -21,8 +21,32 @@
       <div class="swiper-button-next" slot="button-next">
         <img src="/images/reviews/right.svg" alt="">
       </div>
-
     </swiper>
+
+    <div class="container">
+      <div class="videos">
+        <div class="video-item d-flex justify-content-between">
+          <iframe width="400" height="250" src="https://www.youtube.com/embed/3b_yVzt35uY"
+                  title="YouTube video player" frameborder="0" allow="accelerometer;
+            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+          </iframe>
+
+          <iframe width="400" height="250" src="https://www.youtube.com/embed/N4nzm8eGYyo" title="YouTube video player"
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                 gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          <iframe width="400" height="250" src="https://www.youtube.com/embed/mQN8cUoa-TM" title="YouTube video player"
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                 gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <a class="youtube__link" href="https://www.youtube.com/channel/UC_naXlwqsuWZPU5qSuXsZRg">
+        <span>Мы в YouTube:</span>
+        <img src="/images/youtube.svg" alt="youtube">
+      </a>
+    </div>
   </div>
 </template>
 
@@ -396,5 +420,71 @@ export default {
   }
 }
 
+.videos {
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.video-item {
+  @media (max-width: 950px) {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+iframe {
+  margin-top: 60px;
+
+  @media (max-width: 1280px) {
+    width: 350px;
+    height: 200px;
+  }
+
+  @media (max-width: 1100px) {
+    width: 300px;
+    height: 150px;
+  }
+
+  @media (max-width: 950px) {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    width: 450px;
+    height: 251.43px;
+  }
+
+
+  @media (max-width: 590px) {
+    margin-top: 45px;
+    width: 450px;
+    height: 251.43px;
+  }
+  @media (max-width: 460px) {
+    width: 350px;
+    height: 200px;
+  }
+
+  @media (max-width: 360px) {
+    width: 280px;
+    height: 150px;
+  }
+}
+
+.youtube__link {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #20B6D8;
+
+  & > img {
+    margin-left: 20px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 21px;
+  }
+}
 
 </style>

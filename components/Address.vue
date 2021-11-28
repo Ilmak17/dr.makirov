@@ -13,18 +13,27 @@
               метро Бауманская, ул. Госпитальная площадь дом 2 стр 1
             </div>
           </div>
-          <div class="address__text d-flex">
-            <div class="address__text__img">
-              <img src="/images/address/place.svg" alt="place">
-            </div>
-            метро киевская, улица брянская дом 3, клиника  "Семейная"
-          </div>
-          <div class="address__phone d-flex">
+          <div class="address__phone d-flex align-items-center mb-4">
             <div class="address__phone__img">
               <img src="/images/address/phone.svg" alt="place">
             </div>
             <div>
               <a class="address__tel" href="tel:84953613226">8 (495) 361 32 26</a>
+            </div>
+          </div>
+
+          <div class="address__text d-flex">
+            <div class="address__text__img">
+              <img src="/images/address/place.svg" alt="place">
+            </div>
+            метро киевская, улица Брянская дом 3, клиника  "Семейная"
+          </div>
+          <div class="address__phone d-flex">
+            <div class="address__phone__img mt-1">
+              <img src="/images/address/phone.svg" alt="place">
+            </div>
+            <div>
+              <a class="address__tel" href="tel:84956625885">8 (495) 662-58-85</a>
               <div class="address__tel__subtitle">
                 Обращайтесь по всем <br> интересующим Вас вопросам
               </div>
@@ -103,10 +112,10 @@ export default {
 }
 
 .address__item {
-  margin-top: 65px;
+  margin-top: 50px;
 
   @media (max-width: 1290px) {
-    padding-top: 30px;
+    margin-top: 30px;
   }
 }
 

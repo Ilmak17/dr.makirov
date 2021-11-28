@@ -9,18 +9,6 @@
               <div class="diagnostic__line"></div>
               <div class="diagnostic__text">
                 <div class="diagnostic__title">
-                  Рентгеновский снимок
-                </div>
-                <div class="diagnostic__item__text">
-                  при рентгенологическом исследовании определяется искривление позвоночника и деформация позвонков
-                </div>
-              </div>
-            </div>
-
-            <div class="diagnostic__item d-flex item-2">
-              <div class="diagnostic__line"></div>
-              <div class="diagnostic__text">
-                <div class="diagnostic__title">
                   МРТ
                 </div>
                 <div class="diagnostic__item__text">
@@ -29,7 +17,7 @@
               </div>
             </div>
 
-            <div class="diagnostic__item d-flex item-3">
+            <div class="diagnostic__item d-flex item-2">
               <div class="diagnostic__line"></div>
               <div class="diagnostic__text">
                 <div class="diagnostic__title">
@@ -37,6 +25,18 @@
                 </div>
                 <div class="diagnostic__item__text">
                   компьютерная томография позвоночника
+                </div>
+              </div>
+            </div>
+
+            <div class="diagnostic__item d-flex item-3">
+              <div class="diagnostic__line"></div>
+              <div class="diagnostic__text">
+                <div class="diagnostic__title">
+                  Рентгеновский снимок
+                </div>
+                <div class="diagnostic__item__text">
+                  рентгеновский снимок позвоночникарентгеновский снимок позвоночника
                 </div>
               </div>
             </div>
@@ -128,7 +128,7 @@ export default {
 }
 
 .item-1 {
-  margin-left: 53px;
+  margin-left: 70px;
 
 
   @media (max-width: 1290px) {

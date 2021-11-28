@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Header v-if="windowSize > 600"/>
-    <HeaderMobile v-if="windowSize <= 600"/>
+    <Header v-if="windowSize > 700"/>
+    <HeaderMobile v-if="windowSize <= 700"/>
 
-    <a href="tel:84953613226" class="tel-bt" v-if="windowSize <= 600">
+    <a href="tel:84956625885" class="tel-bt" v-if="windowSize <= 600">
       <div class="text-call">
         <img src="/images/tel.svg" alt="phone">
       </div>
@@ -121,7 +121,7 @@ import Team from "~/components/Team";
 import Address from "~/components/Address";
 import Reviews from "~/components/Reviews";
 import Hospital from "~/components/Hospital";
-import Questions from "~/components/Questions";
+import Questions from "~/components/Media";
 import Footer from "~/components/Footer";
 import axios from "axios";
 import FooterMobile from "~/components/FooterMobile";
@@ -314,10 +314,6 @@ p {
     font-size: 14px;
   }
 
-  @media (max-width: 400px) {
-    margin-top: 10px;
-    font-size: 12px;
-  }
 }
 
 .form__input {
@@ -330,13 +326,19 @@ p {
   height: 39px;
   outline: none;
 
+  &:last-child {
+    margin-bottom: 10px;
+  }
+
   &:focus {
     outline: none;
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: none;
   }
 
   @media (max-width: 600px) {
     margin-bottom: 15px;
-    height: 30px;
+    height: 38px;
   }
 
   @media (max-width: 400px) {
@@ -393,7 +395,7 @@ p {
 
 .modal__text {
   text-decoration: underline;
-  width: 80%;
+  width: 100%;
   margin-top: 15px;
   font-size: 14px;
   font-weight: 400;

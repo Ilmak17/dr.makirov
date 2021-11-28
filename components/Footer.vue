@@ -13,10 +13,13 @@
             </div>
             <div class="footer__tel d-flex align-items-center">
               <img src="/images/footer/phone.svg" class="icon transform" alt="phone">
-              <a class="footer__phone" href="tel:84953613226">8 (495) 361 32 26</a>
+              <a class="footer__phone" href="tel:84956625885">8 (495) 662-58-85</a>
             </div>
+            <a href="https://www.youtube.com/channel/UC_naXlwqsuWZPU5qSuXsZRg">
+              <img class="footer__youtube transform" src="/images/footer/youtube.svg" alt="youtube">
+            </a>
             <a href="https://www.instagram.com/dr.makirov">
-              <img class="footer__insta transform" src="/images/footer/instagram.svg" alt="">
+              <img class="footer__insta transform" src="/images/footer/instagram.svg" alt="instagram">
             </a>
           </div>
         </div>
@@ -28,7 +31,7 @@
           </div>
           <div class="footer__address d-flex justify-content-between align-items-center">
             <img src="/images/footer/place.svg" class="icon transform" alt="place">
-            ул. Госпитальная площадь дом 2 стр 1
+            улица Брянская дом 3, клиника "Семейная"
           </div>
         </div>
 
@@ -175,13 +178,6 @@ footer {
 
   @media (max-width: 1290px) {
     font-size: 25px;
-  }
-}
-
-.footer__insta {
-  @media (max-width: 1290px) {
-    width: 32px;
-    height: 32px;
   }
 }
 
